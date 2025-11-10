@@ -1,0 +1,115 @@
+.Page1{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(87, 97, 77);
+}
+.Navbar{
+    display: inline-block;
+    margin: 20px;
+    font-size: xx-large;
+    color: rgb(153, 160, 147);
+}
+.rnav{
+    display: inline-block;
+    margin: 20px;
+}
+.rnav a{
+
+    border: 1px solid rgb(153, 160, 147);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(153, 160, 147);
+}
+.banner{
+    position: absolute;
+    text-align: center;
+    font-size: 150px;
+    font-family: "Aboreto", system-ui;
+    background-color: #97db7e;
+    color: lightgray;
+    opacity: 95%;
+    width: 100%;
+    height: 25%;
+    top: 60px;
+    left: 0px;
+    z-index: 1;
+}
+.Content .Content1 img{
+    position: absolute;
+    left: 0px;
+    top: 32%;
+    height: 50rem;
+    width: 100%;
+}
+.Content .Content2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: inline-block;
+    text-align: center;
+    height: 18%;
+    width: 40%;
+    border-radius: 20px;
+    opacity: 80%;
+    background-color: darkgray;
+}
+.Content .Content2 div{
+    position: absolute;
+    color: darkslategray;
+    top: 35%;
+    left: 10%;
+    font-size: xx-large;
+}
+.Content .Content3 img{
+    position: absolute;
+    left: 0px;
+    top: 124%;
+    height: 110%;
+    width: 100%;
+    z-index: -1;
+}
+.Content .Content4{
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: inline-block;
+    text-align: center;
+    height: 18%;
+    width: 40%;
+    opacity: 80%;
+    border-radius: 20px;
+    background-color: darkgray;
+}
+.Content .Content4 div{
+
+}
+.Content .Content4 div h4{
+    position: absolute;
+    color: darkslategray;
+    top: 35%;
+    padding: 0px 50px;
+    font-size: large;
+}
+.Content > button{
+    position: absolute;
+    top: 195%;
+    left: 35%;
+    border: none;
+    border-radius: 50px ;
+    background-color: #777D62;
+    font-size: large;
+    height: 8.5%;
+    width: 30%;
+}
