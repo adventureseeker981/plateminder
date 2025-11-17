@@ -1,0 +1,100 @@
+.Page1{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(87, 97, 77);
+}
+.Navbar{
+    display: inline-block;
+    margin: 20px;
+}
+.Navbar a{
+    text-decoration: none;
+    font-size: xx-large;
+    color: rgb(153, 160, 147);
+}
+.rnav{
+    display: inline-block;
+    margin: 20px;
+}
+.rnav a{
+
+    border: 1px solid rgb(153, 160, 147);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(153, 160, 147);
+}
+.rnav a:hover{
+    background-color: rgb(153, 160, 147);
+    color: darkslategray;
+}
+.banner{
+    position: absolute;
+    text-align: center;
+    font-size: 150px;
+    font-family: "Aboreto", system-ui;
+    background-color: #97db7e;
+    color: lightgray;
+    opacity: 95%;
+    width: 100%;
+    height: 25%;
+    top: 60px;
+    left: 0px;
+    z-index: 1;
+}
+.Content .Content1 img{
+    position: absolute;
+    left: 0px;
+    top: 32%;
+    height: 50rem;
+    width: 100%;
+}
+.Content .Content2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: inline-block;
+    text-align: center;
+    height: 18%;
+    width: 40%;
+    border-radius: 20px;
+    opacity: 80%;
+    background-color: darkgray;
+}
+.Content .Content2 div{
+    position: absolute;
+    color: darkslategray;
+    top: 0%;
+    left: 0%;
+    font-size: large;
+}
+.Content > .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    border: none;
+    border-radius: 50px ;
+    background-color: #777D62;
+    font-size: large;
+    height: 8.5%;
+    width: 30%;
+}
+.Content > .button > a{
+    display: inline-block;
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
+    font-size: xx-large;
+}

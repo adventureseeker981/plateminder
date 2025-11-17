@@ -1,5 +1,5 @@
 .Page1{
-    position: absolute;
+    position: fixed;
     height: 60px;
     width: 100%;
     top: 0px;
@@ -9,10 +9,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(87, 97, 77);
+    z-index: 6;
 }
 .Navbar{
     display: inline-block;
     margin: 20px;
+}
+.Navbar a{
+    text-decoration: none;
     font-size: xx-large;
     color: rgb(153, 160, 147);
 }
@@ -21,12 +25,15 @@
     margin: 20px;
 }
 .rnav a{
-
     border: 1px solid rgb(153, 160, 147);
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
     color: rgb(153, 160, 147);
+}
+.rnav a:hover{
+    background-color: rgb(153, 160, 147);
+    color: darkslategray;
 }
 .banner{
     position: absolute;
@@ -51,14 +58,14 @@
 }
 .Content .Content2{
     position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9;
+    top: 70%;
+    left: 20%;
+    padding: 1rem;
+    z-index: 5;
     display: inline-block;
     text-align: center;
     height: 18%;
-    width: 40%;
+    width: 55%;
     border-radius: 20px;
     opacity: 80%;
     background-color: darkgray;
@@ -66,8 +73,7 @@
 .Content .Content2 div{
     position: absolute;
     color: darkslategray;
-    top: 35%;
-    left: 10%;
+    top: 25%;
     font-size: xx-large;
 }
 .Content .Content3 img{
@@ -80,9 +86,8 @@
 }
 .Content .Content4{
     position: absolute;
-    top: 180%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 170%;
+    left: 30%;
     z-index: 9;
     display: inline-block;
     text-align: center;
@@ -102,14 +107,24 @@
     padding: 0px 50px;
     font-size: large;
 }
-.Content > button{
+.Content > .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 195%;
     left: 35%;
     border: none;
     border-radius: 50px ;
     background-color: #777D62;
-    font-size: large;
     height: 8.5%;
     width: 30%;
+}
+.Content > .button > a{
+    display: inline-block;
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
+    font-size: xx-large;
+
 }
