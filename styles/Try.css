@@ -1,5 +1,5 @@
 .Page1{
-    position: absolute;
+    position: fixed;
     height: 60px;
     width: 100%;
     top: 0px;
@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(87, 97, 77);
+    z-index: 9;
 }
 .Navbar{
     display: inline-block;
@@ -90,6 +91,11 @@
     font-size: large;
     height: 8.5%;
     width: 30%;
+}
+.Content > .button:hover{
+    background-color: rgb(153, 160, 147);
+    color: darkslategray;
+    cursor: pointer;
 }
 .Content > .button > a{
     display: inline-block;

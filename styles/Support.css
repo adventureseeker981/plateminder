@@ -27,7 +27,7 @@
 .rnav a{
 
     border: 1px solid rgb(153, 160, 147);
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     text-decoration: none;
     color: rgb(153, 160, 147);
@@ -37,7 +37,7 @@
     color: darkslategray;
 }
 .banner{
-    position: fixed;
+    position: absolute;
     text-align: center;
     font-size: 150px;
     font-family: "Aboreto", system-ui;
@@ -48,20 +48,21 @@
     height: 25%;
     top: 60px;
     left: 0px;
-    z-index: -1;
+    z-index: 1;
 }
 .Content .Content1 img{
-    position: fixed;
+    position: absolute;
     left: 0px;
-    top: 0%;
-    height: auto;
+    top: 32%;
+    height: 50rem;
     width: 100%;
-    z-index: -2;
 }
 .Content .Content2{
-    position: fixed;
-    top: 55%;
-    left: 30%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
     display: inline-block;
     text-align: center;
     height: 18%;
@@ -69,43 +70,12 @@
     border-radius: 20px;
     opacity: 80%;
     background-color: darkgray;
-    z-index: -1;
 }
 .Content .Content2 div{
     position: absolute;
     color: darkslategray;
-    top: 40%;
-    left: 10%;
-    font-size: xx-large;
-}
-.Content .Content3 img{
-    position: absolute;
-    left: 0px;
-    top: 90%;
-    height: 110%;
-    width: 100%;
-    z-index: -1;
-}
-.Content .Content4{
-    position: absolute;
-    top: 140%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    display: inline-block;
-    text-align: center;
-    height: 18%;
-    width: 40%;
-    opacity: 80%;
-    border-radius: 20px;
-    background-color: darkgray;
-    z-index: 7;
-}
-.Content .Content4 div h4{
-    position: absolute;
-    color: darkslategray;
-    top: 35%;
-    padding: 0px 50px;
+    top: 0%;
+    left: 20%;
     font-size: large;
 }
 .Content > .button{
@@ -113,14 +83,14 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 155%;
+    top: 95%;
     left: 35%;
     border: none;
     border-radius: 50px ;
     background-color: #777D62;
+    font-size: large;
     height: 8.5%;
     width: 30%;
-    z-index: 7;
 }
 .Content > .button:hover{
     background-color: rgb(153, 160, 147);
@@ -133,5 +103,4 @@
     color: darkslategray;
     font-weight: bold;
     font-size: xx-large;
-    z-index: 7;
 }

@@ -120,6 +120,11 @@
     height: 8.5%;
     width: 30%;
 }
+.Content > .button:hover{
+    background-color: rgb(153, 160, 147);
+    color: darkslategray;
+    cursor: pointer;
+}
 .Content > .button > a{
     display: inline-block;
     text-decoration: none;
