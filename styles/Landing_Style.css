@@ -104,7 +104,7 @@
 .Content .Content4 div h4{
     position: absolute;
     color: darkslategray;
-    top: -5%;
+    top: 35%;
     padding: 0px 50px;
     font-size: large;
 }
@@ -113,7 +113,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 165%;
+    top: 155%;
     left: 35%;
     border: none;
     border-radius: 50px ;
