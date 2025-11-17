@@ -50,6 +50,7 @@
     left: 0px;
     z-index: -1;
 }
+
 .Content .Content1 img{
     position: fixed;
     left: 0px;
@@ -58,10 +59,13 @@
     width: 100%;
     z-index: -2;
 }
-.Content .Content2{
+.Content .box{
+    display: flex;
+    justify-content: center;
+}
+.Content .box .Content2{
     position: fixed;
     top: 55%;
-    left: 30%;
     display: inline-block;
     text-align: center;
     height: 18%;
@@ -72,10 +76,10 @@
     z-index: -1;
 }
 .Content .Content2 div{
+    margin-left: 10%;
     position: absolute;
     color: darkslategray;
     top: 40%;
-    left: 10%;
     font-size: xx-large;
 }
 .Content .Content3 img{
@@ -87,6 +91,7 @@
     z-index: -1;
 }
 .Content .Content4{
+    display: flex;
     position: absolute;
     top: 140%;
     left: 50%;
@@ -94,7 +99,8 @@
 
     display: inline-block;
     text-align: center;
-    height: 18%;
+    height: 10rem;
+    flex-wrap: wrap;
     width: 40%;
     opacity: 80%;
     border-radius: 20px;
