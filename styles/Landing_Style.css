@@ -1,9 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 .Page1{
     position: fixed;
-    height: 60px;
+    height: clamp(40px, 8vw, 60px);
     width: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,11 +17,11 @@
 }
 .Navbar{
     display: inline-block;
-    margin: 20px;
+    margin: clamp(10px, 2vw, 20px);
 }
 .Navbar a{
     text-decoration: none;
-    font-size: xx-large;
+    font-size: clamp(1rem, 2vw, 2rem);
     color: rgb(153, 160, 147);
 }
 .rnav{
@@ -25,12 +29,12 @@
     margin: 20px;
 }
 .rnav a{
-
     border: 1px solid rgb(153, 160, 147);
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     text-decoration: none;
     color: rgb(153, 160, 147);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
 .rnav a:hover{
     background-color: rgb(153, 160, 147);
@@ -38,25 +42,27 @@
 }
 .banner{
     position: fixed;
-    text-align: center;
-    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2rem, 10vw, 150px);
     font-family: "Aboreto", system-ui;
     background-color: #97db7e;
     color: lightgray;
-    opacity: 95%;
     width: 100%;
-    height: 25%;
-    top: 60px;
-    left: 0px;
+    height: clamp(80px, 20vh, 25vh);
+    top: clamp(40px, 8vw, 60px);
+    left: 0;
     z-index: -1;
 }
-
-.Content .Content1 img{
+.Content .Content1 {
     position: fixed;
-    left: 0px;
-    top: 0%;
-    height: auto;
-    width: 100%;
+    background-image: url("../images/wmremove-transformed.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
     z-index: -2;
 }
 .Content .box{
@@ -64,39 +70,43 @@
     justify-content: center;
 }
 .Content .box .Content2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 55%;
-    display: inline-block;
+
     text-align: center;
+    align-content: center;
     height: 18%;
     width: 40%;
     border-radius: 20px;
     opacity: 80%;
     background-color: darkgray;
     z-index: -1;
+    padding: clamp(10px, 2vw, 20px);
 }
 .Content .Content2 div{
-    margin-left: 10%;
-    position: absolute;
     color: darkslategray;
-    top: 40%;
-    font-size: xx-large;
+    font-size: clamp(1rem, 2vw, 2rem);
 }
-.Content .Content3 img{
-    position: absolute;
-    left: 0px;
-    top: 90%;
-    height: 110%;
-    width: 100%;
-    z-index: -1;
+.Content .Content3{
+    position: relative;
+    background-image: url(../images/Capture-2025-11-16-200759.png);
+    background-position: 0 90vh ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200vh;
+    width: 100vw;
+    top: 99%;
+    left: 0;
+    z-index: 5;
 }
 .Content .Content4{
-    display: flex;
     position: absolute;
     top: 140%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: inline-block;
     text-align: center;
     height: 10rem;
@@ -106,13 +116,14 @@
     border-radius: 20px;
     background-color: darkgray;
     z-index: 7;
+    padding: 20px;
 }
 .Content .Content4 div h4{
     position: absolute;
     color: darkslategray;
     top: 35%;
-    padding: 0px 50px;
-    font-size: large;
+    padding: 0 50px;
+    font-size: 1rem;
 }
 .Content > .button{
     display: flex;
@@ -120,9 +131,10 @@
     align-items: center;
     position: absolute;
     top: 155%;
-    left: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     border: none;
-    border-radius: 50px ;
+    border-radius: 50px;
     background-color: #777D62;
     height: 8.5%;
     width: 30%;
@@ -138,6 +150,58 @@
     text-decoration: none;
     color: darkslategray;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 32px;
     z-index: 7;
+}
+
+@media screen and (max-width: 960px) {
+    .Page1 {
+        height: clamp(40px, 8vw, 50px);
+    }
+
+    .banner {
+        height: clamp(80px, 15vh, 20vh);
+    }
+
+    .Content .box .Content2 {
+        width: 85%;
+        top: 50%;
+    }
+
+    .Content .Content4 {
+        width: 85%;
+        top: 130%;
+    }
+
+    .Content > .button {
+        width: 70%;
+        top: 145%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Navbar {
+        margin: clamp(8px, 1.5vw, 15px);
+    }
+    .banner {
+        height: clamp(60px, 12vh, 15vh);
+    }
+    .rnav {
+        margin: clamp(8px, 1.5vw, 15px);
+    }
+    
+    .Content .box .Content2 {
+        width: 90%;
+        top: 48%;
+    }
+    
+    .Content .Content4 {
+        width: 90%;
+        top: 125%;
+    }
+    
+    .Content > .button {
+        width: 80%;
+        top: 140%;
+    }
 }

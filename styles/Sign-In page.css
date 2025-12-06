@@ -1,0 +1,68 @@
+
+#Card{
+    position: relative;
+    display: flex;
+    width: 60vw;
+    height: 50vh;
+    top: 20vh;
+    left: 20vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dfdfdf;
+    border-radius: 5%;
+}
+#Card #image {
+    background-image: url(../images/Capture-2025-12-05-221452.png);
+    z-index: 3;
+    height: 100%;
+    width: 30%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    background-size: cover;
+}
+#Card #form {
+    z-index: 4;
+    height: 100%;
+    width: 70%;
+    background-color: #dfdfdf;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Card #form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: forestgreen;;
+}
+#Card #form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#Card #form form input {
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+}
+#Card #form form button {
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    border-radius: 5%;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+#Card #form form #error {
+    color: red;
+    text-align: center;
+}
+

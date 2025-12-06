@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 .Page1{
     position: fixed;
-    height: 60px;
+    height: clamp(40px, 8vw, 60px);
     width: 100%;
     top: 0px;
     left: 0px;
@@ -13,24 +17,24 @@
 }
 .Navbar{
     display: inline-block;
-    margin: 20px;
+    margin: clamp(10px, 2vw, 20px);
 }
 .Navbar a{
     text-decoration: none;
-    font-size: xx-large;
+    font-size: clamp(1rem, 2vw, 2rem);
     color: rgb(153, 160, 147);
 }
 .rnav{
     display: inline-block;
-    margin: 20px;
+    margin: clamp(10px, 2vw, 20px);
 }
 .rnav a{
-
     border: 1px solid rgb(153, 160, 147);
-    padding: 10px;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     text-decoration: none;
     color: rgb(153, 160, 147);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
 .rnav a:hover{
     background-color: rgb(153, 160, 147);
@@ -38,28 +42,33 @@
 }
 .banner{
     position: absolute;
-    text-align: center;
-    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2rem, 10vw, 150px);
     font-family: "Aboreto", system-ui;
     background-color: #97db7e;
     color: lightgray;
     opacity: 95%;
     width: 100%;
-    height: 25%;
-    top: 60px;
+    height: clamp(80px, 20vh, 25%);
+    top: clamp(40px, 8vw, 60px);
     left: 0px;
     z-index: 1;
 }
-.Content .Content1 img{
-    position: absolute;
-    left: 0px;
-    top: 32%;
-    height: 50rem;
-    width: 100%;
+.Content .Content1 {
+    position: fixed;
+    background-image: url("../images/Capture-2025-10-26-230302.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    z-index: -2;
 }
 .Content .Content2{
     position: absolute;
-    top: 80%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9;
@@ -70,27 +79,27 @@
     border-radius: 20px;
     opacity: 80%;
     background-color: darkgray;
+    padding: clamp(10px, 2vw, 20px);
 }
 .Content .Content2 div{
-    position: absolute;
     color: darkslategray;
-    top: 0%;
-    left: 0%;
-    font-size: large;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
 }
 .Content > .button{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 95%;
-    left: 35%;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
     border: none;
-    border-radius: 50px ;
+    border-radius: 50px;
     background-color: #777D62;
-    font-size: large;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
     height: 8.5%;
-    width: 30%;
+    width: 20%;
+    padding: clamp(8px, 1.5vw, 15px);
 }
 .Content > .button:hover{
     background-color: rgb(153, 160, 147);
@@ -102,5 +111,45 @@
     text-decoration: none;
     color: darkslategray;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: clamp(80px, 15vh, 20%);
+    }
+    
+    .Content .Content2 {
+        width: 85%;
+        top: 75%;
+    }
+    
+    .Content > .button {
+        width: 70%;
+        top: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Navbar {
+        margin: clamp(8px, 1.5vw, 15px);
+    }
+    
+    .rnav {
+        margin: clamp(8px, 1.5vw, 15px);
+    }
+    
+    .banner {
+        height: clamp(60px, 12vh, 15%);
+    }
+    
+    .Content .Content2 {
+        width: 90%;
+        top: 72%;
+    }
+    
+    .Content > .button {
+        width: 80%;
+        top: 88%;
+    }
 }
